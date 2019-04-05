@@ -45,7 +45,7 @@ private void processCommand() {
 	String[] cmds;
 	String cmd;
 	if(cmdString!=null) {
-		cmds=command(cmdString);        //分析命令，分离出各个分量
+		cmds=command(cmdString);          //分析命令，分离出各个分量
 		if(cmds!=null) {
 			cmd=cmds[0].toLowerCase();
 			if(cmds.equals("create")) {
