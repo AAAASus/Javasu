@@ -13,6 +13,7 @@ public class StringDemo {
 			
 		}
 		System.out.println("字符s出现的次数：" + n);
+		System.out.println(s.substring(10,14));   //(2) 取出子字符串"test"  //substring
    }
 }
 
