@@ -33,10 +33,15 @@ public class StringDemo {
         m.appendTail(buf);
         System.out.println(buf);
         
-        StringBuffer buf1 = new StringBuffer(); 
-        buf1.append(s);
         
+        StringBuffer buf1 = new StringBuffer();  //(5) 用StringBuffer方式实现该字符串的倒序输出。(用和for循环方式分别实现)
+        buf1.append(s);
         System.out.println(buf1.reverse());
+        
+       for(int i=s.length()-1;i>=0;i--) {     //(5) 用for方式实现该字符串的倒序输出。
+        	
+        	System.out.print(s.charAt(i));
+        }
        
         
 	}
