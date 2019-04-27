@@ -21,17 +21,24 @@ public class StringDemo {
 	 
 		System.out.println(s.toCharArray());     //(3) 将本字符串复制到一个字符数组Char[] str中.// toCharArray
 		
-		StringBuffer buf = new StringBuffer();
+		StringBuffer buf = new StringBuffer();  
+
  
-        Pattern p = Pattern.compile("\\b\\w");
+        Pattern p = Pattern.compile("\\b\\w");  
         Matcher m = p.matcher(s);
-         
-        while (m.find()) {
+        
+        while (m.find()) {                      //(4) 将字符串中每个单词的第一个字母变成大写， 输出到控制台。//用正则表达式
             m.appendReplacement(buf, m.group().toUpperCase());
         }
         m.appendTail(buf);
         System.out.println(buf);
-		
+        
+        StringBuffer buf1 = new StringBuffer(); 
+        buf1.append(s);
+        
+        System.out.println(buf1.reverse());
+       
+        
 	}
 }
 
