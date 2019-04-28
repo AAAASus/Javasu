@@ -14,6 +14,10 @@ public class Demo01 {
 		sb.delete(0,22);                 //StringBuffer类的删除
 		System.out.println(sb);
 		
+		sb.insert(1," ");          //StringBuffer类的插入
+		sb.insert(6," ");
+		System.out.println(sb);
+		
 
 	}
 
