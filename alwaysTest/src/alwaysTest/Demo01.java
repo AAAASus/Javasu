@@ -11,6 +11,9 @@ public class Demo01 {
 		sb.append("i").append("love").append("java");   //StringBuffer类的添加
 		System.out.println(sb);
 		
+		sb.delete(0,22);                 //StringBuffer类的删除
+		System.out.println(sb);
+		
 
 	}
 
