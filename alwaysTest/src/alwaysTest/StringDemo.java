@@ -8,6 +8,11 @@ public class StringDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s = "this is a test of java";
+		
+		String[] arr = s.split(" +");        //  (6) 将本字符串转换成一个字符串数组，要求每个数组元素都是一个有意义的英文单词,并输出到控制台
+       for(int i = 0; i < arr.length; i++){
+           System.out.println(arr[i]);
+       }
 		int n=0;
 		for(int i=0;i<s.length();i++) {   
 			if(s.charAt(i)=='s'){
@@ -34,16 +39,15 @@ public class StringDemo {
         System.out.println(buf);
         
         
-        StringBuffer buf1 = new StringBuffer();  //(5) 用StringBuffer方式实现该字符串的倒序输出。(用和for循环方式分别实现)
+        StringBuffer buf1 = new StringBuffer();  //(5) ①用StringBuffer方式实现该字符串的倒序输出。
         buf1.append(s);
         System.out.println(buf1.reverse());
         
-       for(int i=s.length()-1;i>=0;i--) {     //(5) 用for方式实现该字符串的倒序输出。
+       for(int i=s.length()-1;i>=0;i--) {     //(5) ②用for方式实现该字符串的倒序输出。
         	
         	System.out.print(s.charAt(i));
         }
        
-        
 	}
 }
 
