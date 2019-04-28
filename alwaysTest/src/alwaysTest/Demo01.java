@@ -8,6 +8,9 @@ public class Demo01 {
 		char[] a = {1,2,3};
 		StringBuffer sb = new StringBuffer(s);   //string对象与stringBuffer对象的相互转换
 		
+		sb.append("i").append("love").append("java");   //StringBuffer类的添加
+		System.out.println(sb);
+		
 
 	}
 
