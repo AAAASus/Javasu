@@ -18,6 +18,8 @@ public class Demo01 {
 		sb.insert(6," ");
 		System.out.println(sb);
 		
+		System.out.println(sb.reverse());   //StringBuffer类的反转
+		
 
 	}
 
