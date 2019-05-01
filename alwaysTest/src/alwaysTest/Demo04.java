@@ -34,10 +34,16 @@ public class Demo04 {
 		System.out.println("———————————使用java8的日期时间包获取当前系统时间，并修改这个时间（分别修改年份、月份、天、小时），然后打印结果———————————");
 		
 		LocalDateTime cdt1=cdt.plus(2,ChronoUnit.YEARS);        //修改年份
-		System.out.println("两年后的时间为："+cdt1.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)));
+		System.out.println("两年后的日期时间为："+cdt1.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)));
+		
+		LocalDateTime cdt2=cdt.plusMonths(3);                  //修改月份
+		System.out.println("三个月后的日期时间为："+cdt2.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)));
+		
+		LocalDateTime cdt3=cdt.plusDays(-10);                //修改天数
+		System.out.println("前10天的日期时间为："+cdt3.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)));
 		
 		LocalDateTime cdt4=cdt.plusHours(5);                    //修改小时
-		System.out.println("五小时候的时间为："+cdt4.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG,FormatStyle.LONG)));
+		System.out.println("五小时候的日期时间为："+cdt4.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)));
 	}
 
 }
