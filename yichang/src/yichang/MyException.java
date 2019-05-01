@@ -7,7 +7,7 @@ package yichang;
 		num = a;
 	}
 	public String toString() {
-		return num+"<10\r\n值必须大于0";
+		return num+"<0\r\n值必须大于0";
 	}
 }
 	class MyException2 extends Exception{
@@ -16,7 +16,7 @@ package yichang;
 			num = a;
 		}
 		public String toString() {
-			return num+">100\r\n值必须小于10";
+			return num+">10\r\n值必须小于10";
 		}
 	}
 
