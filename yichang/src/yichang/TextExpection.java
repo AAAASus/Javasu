@@ -26,6 +26,11 @@ public class TextExpection {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		try {
+			System.out.println(MyTool.parseInt("\"a123bc\""));
+		}catch(MyException e) {
+			e.printStackTrace();
+		}
 
 	}
 
