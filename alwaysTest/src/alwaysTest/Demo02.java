@@ -23,7 +23,7 @@ public class Demo02 {
 		System.out.println(ii);
 		
 		
-		System.out.println("————————————②实现包装类与字符串相互转换————————————");
+		System.out.println("——————————②实现基本数据类型与字符串之间相互转换—————————");
 		String s1 = "123";                   
 		int a1 = Integer.parseInt(s1);  //字符串转变为整型数据类型
 		System.out.println(a1);
@@ -35,6 +35,8 @@ public class Demo02 {
 		System.out.println(b1);
 		float b2 = new Float(s2);
 		System.out.println(b2);
+		
+		
 		
 		
 		
