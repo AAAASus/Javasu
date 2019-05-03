@@ -45,10 +45,11 @@ public class Demo02 {
 		System.out.println(strf);
 		
 		
+		System.out.println("————————————③实现包装类与字符串相互转换———————————");
 		
-		
-		
-
+		Integer i1 = new Integer(100);    //包装类转换为字符串
+		String str1 = i1.toString(); 
+		System.out.println(str1);
 	}
 
 }
