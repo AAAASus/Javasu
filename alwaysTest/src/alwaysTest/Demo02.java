@@ -36,6 +36,14 @@ public class Demo02 {
 		float b2 = new Float(s2);
 		System.out.println(b2);
 		
+		int n = 100;                     //整型数据类型转变为字符串
+		String strn = String.valueOf(n);
+		System.out.println(strn);
+		
+		float f = 5.2f;                   //float数据类型转变为字符串
+		String strf = String.valueOf(f);
+		System.out.println(strf);
+		
 		
 		
 		
