@@ -42,6 +42,18 @@ public class Demo03 {
 		System.out.println();
 		System.out.println();
 		
+		System.out.println("——————————————————————（9）文本替换：将字符串中所有的”pupel”替换为”pupil”。——————————————————————");
+		String str5 = "1234 pupel whatis pupel ? pupel pupel aaabbb";
+		Pattern p3 = Pattern.compile("pupel",Pattern.CASE_INSENSITIVE);
+		Matcher m3 = p3.matcher(str5);
+		StringBuffer buf = new StringBuffer();
+		while (m3.find()) {
+			m3.appendReplacement(buf,"pupil");
+			}
+		m3.appendTail(buf);
+		System.out.println(buf);
+		System.out.println();
+		
 		System.out.println("—————————————————————（10）从一个字符串中提取以%cxll=开头，右部是%的字符串（不包含%）。—————————————————————");
 		String str4 = "%...%CXLL=add1,31,123.12%CXLL=add2,32,124%CXLL=,33,125.12%LL=-121.11";
 		String re1 = "%CXLL=.*?(?=%)";
