@@ -10,7 +10,7 @@ public class Demo03 {
 		// TODO Auto-generated method stub
 		System.out.println("—————————————————————————————（1）检查一个电话号码是否符合(0000)0000-0000——————————————————————————————");
 		String str1="(0777)6216-5683";		      
-		String re1 ="(\\d{4})\\d{4}-\\d{4}" ;               	
+		String re1 ="(\\(\\d{4}\\)\\d{4}-\\d{4})$" ;               	
 		Pattern p1 = Pattern.compile(re1);    	    	
 		Matcher m1 = p1.matcher(str1);    	
 		if(str1.matches(re1)) {
@@ -52,6 +52,20 @@ public class Demo03 {
 			}
 		System.out.println();
 		
+		System.out.println("—————————————————————————（6）输入一个字符串，判断该字符串是否以abc结尾。—————————————————————————");
+		Scanner sc6 = new Scanner(System.in);
+		String s =sc6.nextLine();
+		 String re6 = "abc$";
+		 Pattern p6 = Pattern.compile(re6);
+		 Matcher m6 = p6.matcher(s);
+		if(m6.find()) {
+			
+				System.out.println("yes！");
+		 }else {
+			 System.out.println("no！");
+		 }
+		System.out.println();
+
 		System.out.println("——————（8）将一个字符串中的所有整数提取出来，保存在一维数组中。比如”ae256dd—w348e6”，提取出256,348,6三个整数——————");
 		int arr[] = new int[10];    
 		String str8 = "ae256dd—w348e6";
