@@ -1,5 +1,6 @@
 package alwaysTest;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Demo05 {
@@ -21,6 +22,14 @@ public class Demo05 {
 	        System.arraycopy(arr, 0, arr1, 0, 10);
 	        for(int i=0;i<arr1.length;i++) {
 	        	System.out.print(arr1[i]+" ");
+	        }
+	        System.out.println();
+	        
+	        System.out.println("——————————将数组元素进行排序——————————");
+	        Arrays.parallelSort(arr);
+	        System.out.println("排序后：");
+	        for(int i=0;i<10;i++) {
+	        	System.out.print(arr[i]+" ");
 	        }
 	        System.out.println();
 
