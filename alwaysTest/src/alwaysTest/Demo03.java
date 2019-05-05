@@ -1,5 +1,6 @@
 package alwaysTest;
 
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -9,11 +10,15 @@ public class Demo03 {
 		// TODO Auto-generated method stub
 		System.out.println("—————————————————————————————（1）检查一个电话号码是否符合(0000)0000-0000——————————————————————————————");
 		String str1="(0777)6216-5683";		      
-		String reg ="(\\d{4})\\d{4}-\\d{4}$" ;               	
-		Pattern p1 = Pattern.compile(reg);    	    	
+		String re1 ="(\\d{4})\\d{4}-\\d{4}" ;               	
+		Pattern p1 = Pattern.compile(re1);    	    	
 		Matcher m1 = p1.matcher(str1);    	
-		boolean rs1 = m1.matches();    
-		System.out.println(rs1);                    
+		if(str1.matches(re1)) {
+			System.out.println("电话号码合法！");
+			}
+			else {
+			System.out.println("电话号码不合法！");
+			}                
 		System.out.println();
 		
 		System.out.println("———————————————————————————————（2）将一个字符串中所有的ip地址打印出来———————————————————————————————");
@@ -31,6 +36,20 @@ public class Demo03 {
 		String str3="aaabbbccccd";                   //
 		String rs=str3.replaceAll("(.)(\\1)*", "$1");
 		System.out.println(rs);
+		System.out.println();
+		
+		System.out.println("—————————————————————————————（5）从控制台输入邮箱地址，验证是否为邮箱地址。—————————————————————————————");
+		Scanner sc = new Scanner(System.in);
+		String e = sc.nextLine();
+		String re5 =  "[\\w]+@[\\w]+.[\\w]+";
+		Pattern p5 = Pattern.compile(re5);
+		Matcher m5 = p5.matcher(e);   
+		if(e.matches(re5)) {
+			System.out.println("邮箱地址合法！");
+			}
+			else {
+			System.out.println("邮箱地址不合法！");
+			}
 		System.out.println();
 		
 		System.out.println("——————（8）将一个字符串中的所有整数提取出来，保存在一维数组中。比如”ae256dd—w348e6”，提取出256,348,6三个整数——————");
@@ -65,8 +84,8 @@ public class Demo03 {
 		
 		System.out.println("—————————————————————（10）从一个字符串中提取以%cxll=开头，右部是%的字符串（不包含%）。—————————————————————");
 		String str10 = "%...%CXLL=add1,31,123.12%CXLL=add2,32,124%CXLL=,33,125.12%LL=-121.11";
-		String re1 = "%CXLL=.*?(?=%)";
-		Pattern p10 = Pattern.compile(re1);
+		String re10 = "%CXLL=.*?(?=%)";
+		Pattern p10 = Pattern.compile(re10);
 		Matcher m10 = p10.matcher(str10);
 		while (m10.find()) {
 			String result1=m10.group();
