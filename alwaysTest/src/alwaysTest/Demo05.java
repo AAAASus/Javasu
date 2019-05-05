@@ -1,7 +1,7 @@
 package alwaysTest;
 
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
+
 
 public class Demo05 {
 
@@ -11,7 +11,7 @@ public class Demo05 {
 		Random r = new Random();
 		int arr[] = new int[10];
 	        for(int i=0;i<arr.length;i++){
-	            int temp =  (int)(Math.random()*10)+1;  //随机产生10 个整数
+	            int temp =  (int)(Math.random()*100)+1;  //随机产生10 个整数
 	            arr[i] = temp;                         //将产生的数保存到数组
 	            System.out.print(arr[i]+" ");
 	        }
@@ -31,8 +31,15 @@ public class Demo05 {
 	        for(int i=0;i<10;i++) {
 	        	System.out.print(arr[i]+" ");
 	        }
-	        System.out.println();
-
+	        
+	        System.out.println("\n请输入查找值：");
+	        Scanner sc = new Scanner(System.in);
+			int key = scanner.nextInt();
+			int find = -1;
+			if((find = Arrays.binarySearch(arr, key))>-1) {
+				System.out.println("找到值位于索引："+find+"位置");
+			}else
+				System.out.println("找不到指定值！");		
 	}
 
 }
