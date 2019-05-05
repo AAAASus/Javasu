@@ -31,10 +31,12 @@ public class Demo05 {
 	        for(int i=0;i<10;i++) {
 	        	System.out.print(arr[i]+" ");
 	        }
+	        System.out.println(); 
 	        
+	        System.out.print("——输入一个数值，再查找该数在数组中哪个位置——");
 	        System.out.println("\n请输入查找值：");
 	        Scanner sc = new Scanner(System.in);
-			int key = scanner.nextInt();
+			int key = sc.nextInt();
 			int find = -1;
 			if((find = Arrays.binarySearch(arr, key))>-1) {
 				System.out.println("找到值位于索引："+find+"位置");
