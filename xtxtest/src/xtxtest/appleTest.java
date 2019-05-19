@@ -2,7 +2,6 @@ package xtxtest;
 
 import java.util.function.Consumer;
 
-import test.Apple;
 
 class Apple{
 	String color;
