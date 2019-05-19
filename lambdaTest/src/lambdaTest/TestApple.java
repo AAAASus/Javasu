@@ -1,5 +1,7 @@
 package lambdaTest;
 
+import java.util.function.Consumer;
+
 class Apple{
 	String color;
 	double Weight;
@@ -7,6 +9,15 @@ class Apple{
 		this.color = color;
 		this.Weight = weight;
 	}
+}
+
+class test{
+	public static void ConsumerApple(Apple[] apps,Consumer<Apple> c){
+		 for(Apple app:apps){
+			 c.accept(app);
+		 }
+	 }
+
 }
 
 public class TestApple {
