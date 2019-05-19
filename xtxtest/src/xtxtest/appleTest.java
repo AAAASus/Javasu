@@ -1,5 +1,9 @@
 package xtxtest;
 
+import java.util.function.Consumer;
+
+import test.Apple;
+
 class Apple{
 	String color;
 	double weight;
@@ -7,6 +11,14 @@ class Apple{
 		this.color = color;
 		this.weight = weight;
 	}
+}
+
+class test{
+	public static void ConsumerApple(Apple[] apps,Consumer<Apple> c){
+		 for(Apple app:apps){
+			 c.accept(app);
+		 }
+	 }
 }
 
 public class appleTest {
