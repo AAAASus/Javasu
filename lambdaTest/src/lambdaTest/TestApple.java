@@ -36,7 +36,18 @@ public class TestApple {
 		app[3] = a4;
 		System.out.println("——————————第一次调用：使用lambda形式调用——————————");
 		test.ConsumerApple(app, (Apple apps)->System.out.println(apps.color+"--"+apps.Weight));
+		System.out.println("");
 		
+		System.out.println("——————————第二次调用：使用内部类形式调用——————————");
+		test.ConsumerApple(app,new Consumer<Apple>() {
+
+			@Override
+			public void accept(Apple t) {
+				// TODO Auto-generated method stub
+				System.out.println(t.color+"--"+t.Weight);
+			}
+			
+		});
 
 	}
 
