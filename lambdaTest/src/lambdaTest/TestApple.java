@@ -29,7 +29,13 @@ public class TestApple {
 		Apple a2 = new Apple("green",10.00);
 		Apple a3 = new Apple("blue",8.00);
 		Apple a4 = new Apple("yellow",9.00);
-		Apple[] a = new Apple[4]; 
+		Apple[] app = new Apple[4]; 
+		app[0] = a1;
+		app[1] = a2;
+		app[2] = a3;
+		app[3] = a4;
+		System.out.println("——————————第一次调用：使用lambda形式调用——————————");
+		test.ConsumerApple(app, (Apple apps)->System.out.println(apps.color+"--"+apps.Weight));
 		
 
 	}
