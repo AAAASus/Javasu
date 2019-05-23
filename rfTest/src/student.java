@@ -1,3 +1,6 @@
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class student {
 	private int id;
@@ -15,6 +18,12 @@ public class student {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Set<student> set = new TreeSet<student>();
+		set.add(new student(01,"°¢Üç",80.5));
+		set.add(new student(02,"°¢Çï",82.0));
+		set.add(new student(03,"°¢æÃ",83.5));
+		set.add(new student(03,"°¢æÃ",78.0));
+		Iterator<student> it = set.iterator();
 
 	}
 
