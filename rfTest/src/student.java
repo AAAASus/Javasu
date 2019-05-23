@@ -32,8 +32,12 @@ class student implements Comparable {
 		set.add(new student(02,"°¢Çï",82.0));
 		set.add(new student(03,"°¢æÃ",83.5));
 		set.add(new student(03,"°¢æÃ",90.0));
+		set.add(new student(03,"°¢È«",80.0));
 		Iterator<student> it = set.iterator();
-		
+		while(it.hasNext()) {
+			student s = it.next();
+			System.out.println(s);
+			}
 
 	}
 	
