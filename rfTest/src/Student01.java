@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -50,7 +52,16 @@ public class Student01 implements Comparable<Student01>{
 			  String values1 = hm.get(s);
 			  System.out.println(s+"  "+values1);
 		  }
-		
+		  System.out.println("-------------------------------------------");
+		  System.out.println("利用entrySet方式 遍历MAP");
+		  Set<Entry<Student01, String>> set = hm.entrySet();
+		  Iterator<Entry<Student01, String>> it2 = set.iterator();
+		  while(it2.hasNext()) {
+			  Entry<Student01, String> mapInfo = it2.next();
+			  Student01 ss = mapInfo.getKey();
+			  String values2 = mapInfo.getValue();
+			  System.out.println(ss+"  "+values2);
+	      }
 	}
 
 
