@@ -44,7 +44,10 @@ public class Student02 implements Comparable<Student02> {
 	@Override
 	public int compareTo(Student02 o) {
 		// TODO Auto-generated method stub
-		if(this.getGrade()>o.getGrade()) {
+		//if(this.getGrade()>o.getGrade()) {
+		//	return 1;
+		//}
+		if(this.getId()>o.getId()) {
 			return 1;
 		}
 		return -1;
@@ -61,10 +64,13 @@ public class Student02 implements Comparable<Student02> {
 		list.add(new Student02(01,"d",75.00));
 		Collections.sort(list);
 		Iterator<Student02> it = list.iterator();
-		while(it.hasNext()) {
-			Student02 s = it.next();
-			System.out.println(s);
-		}
+		//Iterator的next方法输出List中的元素
+		//while(it.hasNext()) {
+		//	Student02 s = it.next();
+		//	System.out.println(s);
+		//}
+		//使用Iterator的forEachRemaining方法输出
+		it.forEachRemaining(stu->System.out.println(stu));
 
 	}
 
