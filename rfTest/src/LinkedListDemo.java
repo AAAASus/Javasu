@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class LinkedListDemo {
-	//实现队列
+/*	//实现队列
 	LinkedList ll = new LinkedList();
 	public void push(Object o) {
 		ll.addFirst(o);
@@ -21,6 +21,7 @@ public class LinkedListDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("————————实现队列——————————");
 		LinkedListDemo lld=new LinkedListDemo();
 	        lld.push("12");
 	        lld.push("13");
@@ -31,6 +32,33 @@ public class LinkedListDemo {
 	            System.out.println(lld.pop());
 	        }
 	  }
+*/
+	//实现堆栈
+	LinkedList<Object> link = new LinkedList();
+	public void myAdd(Object obj){
+        link.addFirst(obj);
+    }
+    public Object myGet(){
+        return link.removeLast();
+    }
+ 
+    public boolean isNull(){
+        return link.isEmpty();
+    }
 
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			System.out.println("————————实现堆栈——————————");
+			LinkedListDemo lld = new LinkedListDemo();
+	        lld.myAdd("zhangsan");
+	        lld.myAdd("lisi");
+	        lld.myAdd("wangwu");
+	        lld.myAdd("zhaoqi");
+	        while (!lld.isNull())
+	        {
+	            System.out.println(lld.myGet());
+	        }
+	}
 
 }
